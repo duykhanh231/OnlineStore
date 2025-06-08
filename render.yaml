@@ -1,31 +1,18 @@
 services:
   - type: web
-    name: online-sales-website
-    env: node # This sets the runtime environment to Node.js
+    name: online-sales-website-final # Changed name to ensure it's a fresh service
+    env: node
     plan: free
     region: singapore # Or your preferred region
 
-    # The build and start commands are correct
     buildCommand: "npm install && npm install --prefix frontend && npm run build --prefix frontend"
     startCommand: "node backend/server.js"
     
-    # This is the correct way to define environment variables, including the Node version
     envVars:
       - key: NODE_VERSION
         value: 20
       - key: NODE_ENV
         value: production
-      - key: MONGO_URI
-        fromGroup: online-store-secrets # We will create this group
-      - key: JWT_SECRET
-        fromGroup: online-store-secrets
-      - key: PAYPAL_CLIENT_ID
-        fromGroup: online-store-secrets
-
-# A Secret Group is the best practice for managing your keys
-envVarGroups:
-  - name: online-store-secrets
-    envVars:
       - key: MONGO_URI
         value: "mongodb+srv://onlineStoreUser:onlineStorePassword@cluster0.ixzoape.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
       - key: JWT_SECRET
