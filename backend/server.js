@@ -1,7 +1,7 @@
-import path from 'path';
+/* import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
-import connectDB from './config/db.js';
+import connectDB from './config/db.js'; // Note the path
 
 // Import route files
 import userRoutes from './routes/userRoutes.js';
@@ -9,7 +9,7 @@ import productRoutes from './routes/productRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 
 // Load env vars
-dotenv.config();
+dotenv.config({ path: './backend/.env' });
 
 // Connect to database
 connectDB();
@@ -56,4 +56,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,
   console.log(`Server running in development mode on port ${PORT}`)
-);
+); */
