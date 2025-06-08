@@ -11,6 +11,7 @@ import ShippingPage from './pages/ShippingPage';
 import PaymentPage from './pages/PaymentPage';
 import PlaceOrderPage from './pages/PlaceOrderPage';
 import OrderPage from './pages/OrderPage';
+import RegistrationPage from './pages/RegistrationPage';
 import AdminRoute from './components/AdminRoute';
 import OrderListPage from './pages/admin/OrderListPage';
 import './App.css';
@@ -26,6 +27,7 @@ const App = () => {
             <Route path='/product/:id' element={<ProductPage />} />
             <Route path='/cart' element={<CartPage />} />
             <Route path='/login' element={<LoginPage />} />
+            <Route path='/register' element={<RegistrationPage />} />
             <Route path="/shipping" element={<ShippingPage />} />
             <Route path="/payment" element={<PaymentPage />} />
             <Route path="/placeorder" element={<PlaceOrderPage />} />
