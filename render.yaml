@@ -1,27 +1,34 @@
 services:
   - type: web
     name: online-sales-website
-    env: node
+    env: node # This sets the runtime environment to Node.js
     plan: free
-    region: singapore
-    
-    # Set the Node.js version definitively
-    node:
-      version: 20
+    region: singapore # Or your preferred region
 
-    # Define the build and start commands
+    # The build and start commands are correct
     buildCommand: "npm install && npm install --prefix frontend && npm run build --prefix frontend"
     startCommand: "node backend/server.js"
     
-    # Define your environment variables here
-    # Render will prompt you to sync these from your dashboard
-    # or you can add them manually
+    # This is the correct way to define environment variables, including the Node version
     envVars:
+      - key: NODE_VERSION
+        value: 20
       - key: NODE_ENV
         value: production
       - key: MONGO_URI
-        sync: false # Set this value in the dashboard for security
+        fromGroup: online-store-secrets # We will create this group
       - key: JWT_SECRET
-        sync: false # Set this value in the dashboard for security
+        fromGroup: online-store-secrets
       - key: PAYPAL_CLIENT_ID
-        sync: false # Set this value in the dashboard for security
+        fromGroup: online-store-secrets
+
+# A Secret Group is the best practice for managing your keys
+envVarGroups:
+  - name: online-store-secrets
+    envVars:
+      - key: MONGO_URI
+        value: YOUR_MONGO_URI_HERE
+      - key: JWT_SECRET
+        value: YOUR_JWT_SECRET_HERE
+      - key: PAYPAL_CLIENT_ID
+        value: YOUR_PAYPAL_CLIENT_ID_HERE
