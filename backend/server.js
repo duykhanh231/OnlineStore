@@ -1,10 +1,10 @@
+import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
-import path from 'path'; // We still need path for deployment
 
 // Load environment variables from the root .env file
 dotenv.config();
@@ -30,13 +30,11 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
   );
 } else {
+  // THE FIX IS HERE: Changed app.get('') to app.get('/')
   app.get('/', (req, res) => {
-    res.send('API is running...');
+    res.send('API is running in development...');
   });
 }
-
-// NOTE: No custom error handling middleware is defined in this basic setup.
-// Express will use its default error handler.
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`));
