@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: online-sales-website
+    env: node
+    plan: free
+    region: singapore
+    
+    # Set the Node.js version definitively
+    node:
+      version: 20
+
+    # Define the build and start commands
+    buildCommand: "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+    startCommand: "node backend/server.js"
+    
+    # Define your environment variables here
+    # Render will prompt you to sync these from your dashboard
+    # or you can add them manually
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URI
+        sync: false # Set this value in the dashboard for security
+      - key: JWT_SECRET
+        sync: false # Set this value in the dashboard for security
+      - key: PAYPAL_CLIENT_ID
+        sync: false # Set this value in the dashboard for security
