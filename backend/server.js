@@ -4,9 +4,9 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js'; // Note the path
 
 // Import route files
-import userRoutes from './routes/userRoutes.js';
+/* import userRoutes from './routes/userRoutes.js';
 import productRoutes from './routes/productRoutes.js';
-import orderRoutes from './routes/orderRoutes.js';
+import orderRoutes from './routes/orderRoutes.js'; */
 
 // Load env vars
 dotenv.config({ path: './backend/.env' });
@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
 });
 
 // Mount the routers
-app.use('/api/users', userRoutes);
+/* app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
-app.use('/api/orders', orderRoutes); 
+app.use('/api/orders', orderRoutes);  */
 
 app.get('/api/config/paypal', (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
