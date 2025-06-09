@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.product-card-image {
+  /* Set a fixed height for all image containers */
+  height: 200px; 
+  object-fit: contain;
+}
