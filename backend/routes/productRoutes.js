@@ -5,10 +5,10 @@ import {
   getProductById,
 } from '../controllers/productController.js';
 
-// @route   GET /api/products
+// Fetch all products
 router.route('/').get(getProducts);
 
-// @route   GET /api/products/:id
+// Fetch a single product by its ID
 router.route('/:id').get(getProductById);
 
 export default router;
