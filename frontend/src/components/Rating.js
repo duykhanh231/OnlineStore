@@ -4,7 +4,8 @@ const Rating = ({ value, text, color }) => {
   return (
     <div className='rating'>
       <span>
-        <i style={{ color }}
+        <i
+          style={{ color }}
           className={
             value >= 1
               ? 'fas fa-star'
@@ -15,7 +16,8 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
-        <i style={{ color }}
+        <i
+          style={{ color }}
           className={
             value >= 2
               ? 'fas fa-star'
@@ -26,7 +28,8 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
-        <i style={{ color }}
+        <i
+          style={{ color }}
           className={
             value >= 3
               ? 'fas fa-star'
@@ -37,7 +40,8 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
-        <i style={{ color }}
+        <i
+          style={{ color }}
           className={
             value >= 4
               ? 'fas fa-star'
@@ -48,7 +52,8 @@ const Rating = ({ value, text, color }) => {
         ></i>
       </span>
       <span>
-        <i style={{ color }}
+        <i
+          style={{ color }}
           className={
             value >= 5
               ? 'fas fa-star'
@@ -64,7 +69,7 @@ const Rating = ({ value, text, color }) => {
 };
 
 Rating.defaultProps = {
-  color: '#f8e825',
+  color: '#f8e825', // A vibrant yellow color
 };
 
 export default Rating;

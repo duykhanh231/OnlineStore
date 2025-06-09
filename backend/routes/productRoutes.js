@@ -3,12 +3,12 @@ const router = express.Router();
 import {
   getProducts,
   getProductById,
+  createProductReview, // <-- THE FIX: Ensure this is imported.
 } from '../controllers/productController.js';
+import { protect } from '../middleware/authMiddleware.js';
 
-// Fetch all products
 router.route('/').get(getProducts);
-
-// Fetch a single product by its ID
 router.route('/:id').get(getProductById);
+router.route('/:id/reviews').post(protect, createProductReview);
 
 export default router;

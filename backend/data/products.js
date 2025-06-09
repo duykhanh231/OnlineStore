@@ -8,8 +8,20 @@ const products = [
     category: 'Electronics',
     price: 89.99,
     countInStock: 10,
+    reviews: [
+      {
+        name: 'Jane Doe',
+        rating: 5,
+        comment: 'Amazing sound quality and seamless pairing with my iPhone. Highly recommend!',
+      },
+      {
+        name: 'Robert Smith',
+        rating: 4,
+        comment: 'Great product, but the fit is a little loose for my ears. Battery life is excellent.',
+      },
+    ],
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 2,
   },
   {
     name: 'iPhone 13 Pro 256GB Memory',
@@ -20,8 +32,15 @@ const products = [
     category: 'Electronics',
     price: 599.99,
     countInStock: 7,
-    rating: 4.0,
-    numReviews: 8,
+    reviews: [
+      {
+        name: 'Emily Johnson',
+        rating: 5,
+        comment: 'The camera is absolutely stunning, especially in low light. The ProMotion display is buttery smooth.',
+      },
+    ],
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'Cannon EOS 80D DSLR Camera',
@@ -32,8 +51,20 @@ const products = [
     category: 'Electronics',
     price: 929.99,
     countInStock: 5,
-    rating: 3,
-    numReviews: 12,
+    reviews: [
+      {
+        name: 'Michael Brown',
+        rating: 4,
+        comment: 'A fantastic camera for enthusiasts. Great image quality and autofocus performance.',
+      },
+      {
+        name: 'Sarah Davis',
+        rating: 5,
+        comment: 'My go-to camera for both photography and videography. The flip screen is a huge plus!',
+      },
+    ],
+    rating: 4.5,
+    numReviews: 2,
   },
   {
     name: 'Sony Playstation 5',
@@ -44,8 +75,9 @@ const products = [
     category: 'Electronics',
     price: 399.99,
     countInStock: 11,
-    rating: 5,
-    numReviews: 12,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Logitech G-Series Gaming Mouse',
@@ -56,8 +88,15 @@ const products = [
     category: 'Electronics',
     price: 49.99,
     countInStock: 7,
-    rating: 3.5,
-    numReviews: 10,
+    reviews: [
+      {
+        name: 'Chris Wilson',
+        rating: 5,
+        comment: 'Comfortable, responsive, and the RGB lighting is a nice touch. Great value for the price.',
+      },
+    ],
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'Amazon Echo Dot 3rd Generation',
@@ -68,8 +107,9 @@ const products = [
     category: 'Electronics',
     price: 29.99,
     countInStock: 0,
-    rating: 4,
-    numReviews: 12,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Samsung 4K Smart TV',
@@ -80,8 +120,15 @@ const products = [
     category: 'Electronics',
     price: 749.99,
     countInStock: 8,
-    rating: 4.8,
-    numReviews: 25,
+    reviews: [
+      {
+        name: 'David Martinez',
+        rating: 5,
+        comment: 'Incredible picture quality. The smart features are fast and easy to use.',
+      },
+    ],
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'Dell XPS 15 Laptop',
@@ -92,8 +139,9 @@ const products = [
     category: 'Electronics',
     price: 1899.99,
     countInStock: 4,
-    rating: 4.7,
-    numReviews: 19,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Bose QuietComfort 45 Headphones',
@@ -104,8 +152,15 @@ const products = [
     category: 'Electronics',
     price: 329.00,
     countInStock: 15,
-    rating: 4.9,
-    numReviews: 31,
+    reviews: [
+       {
+        name: 'Jessica Garcia',
+        rating: 5,
+        comment: 'The noise cancellation is mind-blowing. Perfect for travel and noisy environments.',
+      },
+    ],
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'GoPro HERO10 Black',
@@ -116,8 +171,9 @@ const products = [
     category: 'Electronics',
     price: 449.99,
     countInStock: 9,
-    rating: 4.6,
-    numReviews: 15,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Nintendo Switch - OLED Model',
@@ -128,8 +184,15 @@ const products = [
     category: 'Electronics',
     price: 349.99,
     countInStock: 12,
-    rating: 4.8,
-    numReviews: 22,
+    reviews: [
+      {
+        name: 'James Rodriguez',
+        rating: 5,
+        comment: 'The OLED screen is a huge upgrade. Colors are so much more vibrant!',
+      },
+    ],
+    rating: 5,
+    numReviews: 1,
   },
   {
     name: 'Anker PowerCore 10000',
@@ -140,8 +203,9 @@ const products = [
     category: 'Electronics',
     price: 25.99,
     countInStock: 30,
-    rating: 4.7,
-    numReviews: 150,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Razer BlackWidow V3 Keyboard',
@@ -152,8 +216,9 @@ const products = [
     category: 'Electronics',
     price: 139.99,
     countInStock: 11,
-    rating: 4.5,
-    numReviews: 45,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'WD 2TB Elements Portable HDD',
@@ -164,8 +229,9 @@ const products = [
     category: 'Electronics',
     price: 59.99,
     countInStock: 25,
-    rating: 4.8,
-    numReviews: 95,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Apple Watch Series 7',
@@ -176,8 +242,9 @@ const products = [
     category: 'Electronics',
     price: 399.00,
     countInStock: 18,
-    rating: 4.9,
-    numReviews: 40,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
   {
     name: 'Sonos One (Gen 2) Speaker',
@@ -188,8 +255,9 @@ const products = [
     category: 'Electronics',
     price: 219.00,
     countInStock: 14,
-    rating: 4.7,
-    numReviews: 28,
+    reviews: [],
+    rating: 0,
+    numReviews: 0,
   },
 ];
 
